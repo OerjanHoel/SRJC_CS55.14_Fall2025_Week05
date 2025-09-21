@@ -2,7 +2,7 @@ import Head from 'next/head'; // Imports head from Next.js
 import Link from 'next/link'; // Imports link from Next.js
 import Layout, { siteTitle } from '../components/layout'; // Imports layout and sisteTitle from layout.js. siteTitle a variable in layout.js
 import utilStyles from '../styles/utils.module.css'; // Imports CSS from utils.module.css file
-import { getSortedPostsData } from '../lib/posts'; // Imports function from posts.js
+import { getSortedPostsData } from '../lib/posts-json'; // Imports function from posts-json.js
 import Date from '../components/date'; // Imports the Date module we installed
 
 // Function creates the static html for our blog posts

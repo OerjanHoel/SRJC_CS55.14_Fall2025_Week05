@@ -1,0 +1,20 @@
+[
+    {
+        "title": "History of C Programming Language.",
+        "date": "2025-09-15",
+        "contentHtml": "<p>I don't know about you but <strong>I like</strong> Next.js quite a bit.</p><p>Except, perhaps, for the thousands of files living in the node_modules folder.</p>",
+        "id": 1
+    },
+    {
+        "title": "Linux and Unix, short introduction.",
+        "date": "2025-09-14",
+        "contentHtml": "<p>Next.js has two forms of pre-rendering: <strong>Static Generation</strong> and <strong>Server-side Rendering</strong>. The difference is in <strong>when</strong> it generates the HTML for a page.</p>",
+        "id": 2
+    },
+    {
+        "title": "Short history of Python programming language.",
+        "date": "2025-09-13",
+        "contentHtml": "<p>Python is a widely used general-purpose, high-level programming language. It was initially designed by Guido van Rossum in 1991 and developed by Python Software Foundation. It was mainly developed to emphasize code readability, and its syntax allows programmers to express concepts in fewer lines of code.</p><h1>Who Invented Python?</h1><p> was released, it used a lot fewer codes to express the concepts, when we compare it with Java , C++ & C . Its design philosophy was quite good too. Its main objective is to provide code readability and advanced developer productivity. When it was released, it had more than enough capability to provide classes with inheritance, several core data types of exception handling and functions.</p>",
+        "id": 3
+    }
+]
