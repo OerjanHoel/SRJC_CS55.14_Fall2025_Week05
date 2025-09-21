@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs'; // Importing the 
 import path from 'path';
 
 const dataDir = path.join(process.cwd(), 'data');
@@ -23,7 +23,7 @@ export function getAllPostIds() {
     const filePath = path.join(dataDir, 'posts.json');
     const jsonString = fs.readFileSync(filePath, 'utf8');
     const jsonObj = JSON.parse(jsonString);
-    // console.log(jsonObj); // Remove to avoid large terminal output
+    console.log(jsonObj);
     return jsonObj.map(item => {
         return {
             params: {
@@ -45,7 +45,8 @@ export function getPostData(id) {
             id: id,
             title: 'Not found',
             date: '',
-            contentHtml: 'Not found'
+            contentHtml: 'Not found',
+            sourceURL: ''
         }
     } else {
         return objReturned[0];

@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts-json'; // Imports th
 import Head from 'next/head'; // Imports head from Next.js
 import Date from '../../components/date'; // Imports Date from the date module we installed
 import utilStyles from '../../styles/utils.module.css'; // Imports the CSS from utils.module.css file 
+import Link from 'next/link'; // Imports the link function from Next.js
 
 
 // Exports the layout of the post data and adds CSS
@@ -19,6 +20,7 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <Link href={postData.sourceURL}>Source</Link>
       </article>
     </Layout>
   );
