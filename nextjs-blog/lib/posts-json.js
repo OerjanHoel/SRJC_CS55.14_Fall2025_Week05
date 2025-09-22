@@ -1,15 +1,21 @@
-import fs from 'fs'; // Importing the 
-import path from 'path';
+import fs from 'fs'; // Importing the file system from Node 
+import path from 'path'; // Imports Path from Node
 
+// Path joined for adding data directory
 const dataDir = path.join(process.cwd(), 'data');
 
+// Same function as used before
+// Except this is not async
+// and it is pulling data from JSON
 export function getSortedPostsData() {
-    const filePath = path.join(dataDir, 'posts.json');
-    const jsonString = fs.readFileSync(filePath, 'utf8');
-    const jsonObj = JSON.parse(jsonString);
+    const filePath = path.join(dataDir, 'posts.json'); // Variable for the JSON file location
+    const jsonString = fs.readFileSync(filePath, 'utf8'); // Variable for reading the JSON file
+    const jsonObj = JSON.parse(jsonString); // Varaiable that parses our JSON array objects to strings
+    // Sort our object based on tile
     jsonObj.sort(function (a, b) {
         return a.title.localeCompare(b.title);
     });
+    // Give us the ourput from the mapping of the array
     return jsonObj.map(item => {
         return {
             id: item.id.toString(),
@@ -19,11 +25,16 @@ export function getSortedPostsData() {
     });
 }
 
+// Same function as used before
+// Except this is not async
+// and it is pulling data from JSON
 export function getAllPostIds() {
-    const filePath = path.join(dataDir, 'posts.json');
-    const jsonString = fs.readFileSync(filePath, 'utf8');
-    const jsonObj = JSON.parse(jsonString);
+    const filePath = path.join(dataDir, 'posts.json'); // Variable for the JSON file location
+    const jsonString = fs.readFileSync(filePath, 'utf8'); // Variable for reading the JSON file
+    const jsonObj = JSON.parse(jsonString); // Varaiable that parses our JSON array objects to strings
+     // Writes  out the objects in the JSON array to temrinal
     console.log(jsonObj);
+    // Give us the ourput from the mapping of the array
     return jsonObj.map(item => {
         return {
             params: {
@@ -33,13 +44,18 @@ export function getAllPostIds() {
     });
 }
 
+// Same function as used before (get the post data from )
+// Except this is not async
+// and it is pulling data from JSON
 export function getPostData(id) {
     const filePath = path.join(dataDir, 'posts.json');
     const jsonString = fs.readFileSync(filePath, 'utf8');
     const jsonObj = JSON.parse(jsonString);
     const objReturned = jsonObj.filter(obj => {
-        return obj.id.toString() === id;
+    // Give us the ourput from the mapping of the array
+    return obj.id.toString() === id;
     });
+    // If statement gives a mesasge if the objects are not returned from JSON 
     if (objReturned.length === 0) {
         return {
             id: id,
