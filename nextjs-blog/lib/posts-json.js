@@ -15,7 +15,7 @@ export function getSortedPostsData() {
     jsonObj.sort(function (a, b) {
         return a.title.localeCompare(b.title);
     });
-    // Give us the ourput from the mapping of the array
+    // Give us the output from the mapping of the array
     return jsonObj.map(item => {
         return {
             id: item.id.toString(),
@@ -34,7 +34,7 @@ export function getAllPostIds() {
     const jsonObj = JSON.parse(jsonString); // Varaiable that parses our JSON array objects to strings
      // Writes  out the objects in the JSON array to temrinal
     console.log(jsonObj);
-    // Give us the ourput from the mapping of the array
+    // Give us the output from the mapping of the array
     return jsonObj.map(item => {
         return {
             params: {
@@ -48,11 +48,11 @@ export function getAllPostIds() {
 // Except this is not async
 // and it is pulling data from JSON
 export function getPostData(id) {
-    const filePath = path.join(dataDir, 'posts.json');
-    const jsonString = fs.readFileSync(filePath, 'utf8');
-    const jsonObj = JSON.parse(jsonString);
+    const filePath = path.join(dataDir, 'posts.json'); // Variable for the JSON file location
+    const jsonString = fs.readFileSync(filePath, 'utf8'); // Variable for reading the JSON file
+    const jsonObj = JSON.parse(jsonString); // Varaiable that parses our JSON array objects to strings
     const objReturned = jsonObj.filter(obj => {
-    // Give us the ourput from the mapping of the array
+    // Give us the output from the mapping of the array
     return obj.id.toString() === id;
     });
     // If statement gives a mesasge if the objects are not returned from JSON 
